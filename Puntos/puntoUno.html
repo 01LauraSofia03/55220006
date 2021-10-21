@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link href="../css/puntoUno.css" rel="stylesheet" type="text/css" />
+
+    <title>Punto 1</title>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+               $("#resultado").val($("#contarCarac").val().length + " Caracteres");
+                 $("#resultado").addClass('mui--is-not-empty');
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="inicio"> <a href="../index.html"><center>Inicio</center></a></div>
+        <div id="nombre">Laura Sofia Diaz Rodriguez</div>
+        <div id="codigo">55220006</div>
+   
+    <br>
+    <br>
+    <br>
+    <h1>
+        <center>Por favor, ingrese un texto para saber<br> cuántos caracteres tiene.</center>
+    </h1>
+    <br>
+    <br>
+    <div id="panel">
+        <br>
+        <br>
+        <input type="text" id="contarCarac">
+        <button id="enviar">Enviar</button>
+        <br>
+        <br>
+        <br>
+        <input id="resultado" />
+    </div>
+</body>
+
+</html>

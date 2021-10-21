@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="../js/jquery-3.5.1.min.js"></script>
+    <link href="../css/puntoCuatro.css" rel="stylesheet" type="text/css" />
+    <title>Punto 4</title>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                var nomb = document.getElementById("nombree").value;
+                var mater = document.getElementById("materia").value;
+                var notU = document.getElementById("notaUno").value;
+                var notD = document.getElementById("notaDos").value;
+                var notT = document.getElementById("notaTres").value;
+                var p = ((parseFloat(notU) + parseFloat(notD) + parseFloat(notT)) / 3);
+                p = p.toFixed(1);
+                if (p >= 3) {
+                    $("#resultado").val("Felicidades " + nomb + " su nota es " + p + ", pasó la materia " + mater).css('background-color', 'green');;
+                } else {
+                    $("#resultado").val("Lo siento " + nomb + " su nota es " + p + ", no pasó la materia " + mater).css('background-color', 'red');;
+                }
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <body>
+        <div id="inicio"> <a href="../index.html">
+                <center>Inicio</center>
+            </a></div>
+        <div id="nombre">Laura Sofia Diaz Rodriguez</div>
+        <div id="codigo">55220006</div>
+
+        <br>
+        <br>
+        <br>
+        <h1>
+            <center>Ingrese sus datos</center>
+        </h1>
+        <div id="panel">
+
+            <label>Nombre</label>
+            <input id="nombree" class="inputs" type="text">
+            <br>
+            <br>
+            <label>Materia</label>
+            <input id="materia" class="inputs" type="text">
+            <br>
+            <br>
+            <label>Nota 1</label>
+            <input id="notaUno" class="inputs" type="number">
+            <br>
+            <br>
+            <label>Nota 2</label>
+            <input id="notaDos" class="inputs" type="number">
+            <br>
+            <br>
+            <label>Nota 3</label>
+            <input id="notaTres" class="inputs" type="numer">
+            <br>
+            <br>
+            <button id="enviar">Enviar</button>
+            <br>
+            <br>
+
+            <textarea name="textarea" rows="10" cols="50" id="resultado"></textarea>
+        </div>
+    </body>
+
+</html>
