@@ -36,13 +36,13 @@ body{
             position: absolute;
             left: calc(50% - 225px);
             width: 380px;
-            height: 200px;
+            height: auto;
             background-color:rgb(144, 207, 243);
             border-radius: 15px 15px 15px 15px;
             border-style: solid;
             border: 1px solid;
             padding: 30px;
-            box-shadow: 5px 10px 18px #888888
+            box-shadow: 5px 10px 18px #888888;
             
         }
         
@@ -65,7 +65,7 @@ body{
              border: 0px; 
         }
         #resultado{
-            height: 30px;  
+            height: auto;  
             width: 390px;
             border-radius: 5px 5px 5px 5px;
              border: 0px;

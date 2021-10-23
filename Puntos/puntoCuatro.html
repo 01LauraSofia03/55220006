@@ -17,10 +17,14 @@
                 var notT = document.getElementById("notaTres").value;
                 var p = ((parseFloat(notU) + parseFloat(notD) + parseFloat(notT)) / 3);
                 p = p.toFixed(1);
-                if (p >= 3) {
-                    $("#resultado").val("Felicidades " + nomb + " su nota es " + p + ", pasó la materia " + mater).css('background-color', 'green');;
+
+                if (p>5 || p<0 || notU == '' ||notD == '' ||notT == ''){
+                    $("#resultado").val("Notas inválidas").css('background-color', 'red');
+                }
+                    else if (p >= 3) {
+                    $("#resultado").val("Felicidades " + nomb + " su nota es " + p + ", pasó la materia " + mater).css('background-color', 'green');
                 } else {
-                    $("#resultado").val("Lo siento " + nomb + " su nota es " + p + ", no pasó la materia " + mater).css('background-color', 'red');;
+                    $("#resultado").val("Lo siento " + nomb + " su nota es " + p + ", no pasó la materia " + mater).css('background-color', 'red');
                 }
 
             });

@@ -12,11 +12,11 @@
                 var eda = document.getElementById("edad").value;
                 var nomb = document.getElementById("nombree").value;
                 if (eda > 17) {
-                    $("#resultado").val("Hola " + nomb + " usted es mayor de edad");
-                } else if (eda == 0 || eda < 0) {
+                    $("#resultado").val("Hola " + nomb + ", usted es mayor de edad");
+                } else if (eda == 0 || eda < 0 || eda % 1 !== 0) {
                     $("#resultado").val("Hola, su edad no es válida");
                 } else {
-                    $("#resultado").val("Hola " + nomb + " usted es menor de edad");
+                    $("#resultado").val("Hola " + nomb + ", usted es menor de edad");
                 }
 
             });
