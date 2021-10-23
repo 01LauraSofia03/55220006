@@ -17,18 +17,25 @@
                 const lon = cadena.length;
                 for (var i = 0; i < lon; i++) {
                     var cadena = separar.split(separador)[i];
-                    if (cadena % 2 == 0) {        
+                    if (cadena<0 ) {     
                         var div = document.getElementById('resultado');
                         var imprimir = document.createElement("span");
-                        imprimir.innerHTML += "<br>";                        
-                        imprimir.innerHTML += "Número par".fontcolor('blue');        
-                        div.appendChild(imprimir);
+                        imprimir.innerHTML += "<br>";
+                        imprimir.innerHTML += "Es un número negativo".fontcolor('red');       
+                        div.appendChild(imprimir);   
+                       
                        // $("#resultado").val("Número par");
                     } else if(cadena % 1 !== 0){
                         var div = document.getElementById('resultado');
                         var imprimir = document.createElement("span");
                         imprimir.innerHTML += "<br>";
-                        imprimir.innerHTML += "Ingrese números enteros".fontcolor('red');       
+                        imprimir.innerHTML += "No es un número entero".fontcolor('red');       
+                        div.appendChild(imprimir);
+                    }else if(cadena % 2 == 0){
+                        var div = document.getElementById('resultado');
+                        var imprimir = document.createElement("span");
+                        imprimir.innerHTML += "<br>";                        
+                        imprimir.innerHTML += "Número par".fontcolor('blue');        
                         div.appendChild(imprimir);
                     }
                     else {
